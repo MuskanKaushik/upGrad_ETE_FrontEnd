@@ -31,51 +31,49 @@ function f() {
     xhttp1.send();
 }
 
-
-
 function create(count_case, count_active, count_death) {
-    var parent = document.getElementById("divB");
+    var par = document.getElementById("divB");
     var dparent = document.createElement("div");
-    var c_case = document.createElement("p");
+    var ccase = document.createElement("p");
    
     var c_text = document.createTextNode("Confirmed cases:");
-    c_case.appendChild(c_text);
+    ccase.appendChild(c_text);
 
-    var s_c_case = document.createElement("span");
-    var s_c_c_text = document.createTextNode(count_case);
+    var sc_case = document.createElement("span");
+    var sc_text = document.createTextNode(count_case);
 
-    s_c_case.appendChild(s_c_c_text);
-    c_case.appendChild(s_c_case);
+    sc_case.appendChild(sc_text);
+    ccase.appendChild(sc_case);
 
-    dparent.appendChild(c_case);
+    dparent.appendChild(ccase);
 
-    var a_case = document.createElement("p");
+    var acase = document.createElement("p");
     var a_text = document.createTextNode("Active cases:");
-    a_case.appendChild(a_text);
+    acase.appendChild(a_text);
 
-    var s_a_case = document.createElement("span");
-    var s_a_text = document.createTextNode(count_active);
+    var sa_case = document.createElement("span");
+    var sa_text = document.createTextNode(count_active);
 
-    s_a_case.appendChild(s_a_text);
-    a_case.appendChild(s_a_case);
+    sa_case.appendChild(sa_text);
+    acase.appendChild(sa_case);
 
-    dparent.appendChild(a_case);
+    dparent.appendChild(acase);
 
 
 
-    var d_case = document.createElement("p");
+    var dcase = document.createElement("p");
     var d_text = document.createTextNode("Death cases:");
-    d_case.appendChild(d_text);
+    dcase.appendChild(d_text);
 
-    var s_d_case = document.createElement("span");
-    var s_d_text = document.createTextNode(count_death);
+    var sd_case = document.createElement("span");
+    var sd_text = document.createTextNode(count_death);
 
-    s_d_case.appendChild(s_d_text);
-    d_case.appendChild(s_d_case);
+    sd_case.appendChild(sd_text);
+    dcase.appendChild(sd_case);
 
-    dparent.appendChild(d_case);
+    dparent.appendChild(dcase);
 
 
     dparent.setAttribute("class", "div_b");
-    parent.appendChild(dparent);
+    par.appendChild(dparent);
 }
